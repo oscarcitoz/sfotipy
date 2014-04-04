@@ -7,7 +7,7 @@ class EmailBackend(object):
 
 			if user.check_password(password):
 				return user
-		except User.DoesNotExists:
+		except User.DoesNotExist:
 			return None
 
 	def get_user(self,user_id):
