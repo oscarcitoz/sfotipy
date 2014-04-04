@@ -7,7 +7,6 @@ def signup_view(request):
 	form=UserCreationEmailForm(request.POST or None)
 	if form.is_valid():
 		form.save()
-		print form
 	return render(request,'signup.html',{'form':form})
 
 def sigin_view(request):
